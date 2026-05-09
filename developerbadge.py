@@ -1,8 +1,7 @@
-
 import discord
 from discord.ext import commands
 
-TOKEN = 'Put_Your_Token_Here'
+TOKEN = input("Please enter your Discord bot token: ")
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -15,6 +14,6 @@ async def on_ready():
 
 @bot.command(name='level')
 async def level(ctx):
-    await ctx.send(f'Type this command everyday so you can get the badge')
+    await ctx.send(f'Type this command every day for you to get the badge')
 
 bot.run(TOKEN)
